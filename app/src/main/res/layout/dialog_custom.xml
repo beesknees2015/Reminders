@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<LinearLayout android:id="@+id/custom_root_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="300dp"
               android:layout_height="match_parent"
-                android:id="@+id/custom_root_layout"
-              android:background="@color/green">
+              android:background="@color/green"
+              android:orientation="vertical">
 
     <TextView
+        android:id="@+id/custom_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="New Reminder:"
-        android:id="@+id/custom_title"
         android:gravity="center_vertical"
         android:padding="10dp"
+        android:text="New Reminder:"
         android:textColor="@color/white"
         android:textSize="24sp"/>
 
     <EditText
+        android:id="@+id/custom_edit_reminder"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/custom_edit_reminder"
         android:layout_margin="4dp"
         android:background="@color/light_grey"
         android:gravity="start"
         android:textColor="@color/black">
+
         <requestFocus/>
     </EditText>
 
     <CheckBox
+        android:id="@+id/custom_check_box"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Important"
-        android:id="@+id/custom_check_box"
         android:layout_margin="4dp"
         android:background="@color/black"
         android:paddingLeft="32dp"
+        android:text="Important"
         android:textColor="@color/white"/>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <Button
+            android:id="@+id/custom_button_cancel"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:text="Cancel"
-            android:id="@+id/custom_button_cancel"
             android:layout_weight="50"
+            android:text="Cancel"
             android:textColor="@color/white"/>
 
         <Button
+            android:id="@+id/custom_button_commit"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:text="Commit"
             android:layout_weight="50"
-            android:textColor="@color/white"
-            android:id="@+id/custom_button_commit"/>
+            android:text="Commit"
+            android:textColor="@color/white"/>
     </LinearLayout>
 </LinearLayout>
